@@ -20,14 +20,17 @@ public class Selectall {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
 		driver.get("https://etrain.info/train/Chennai-Sf-Exp-12604/schedule");
 		
-	driver.findElement(By.xpath("//input[@id='bartrainid']")).sendKeys("chenn");
+	driver.findElement(By.xpath("//input[@id='bartrainid']")).sendKeys("chennai");
 	
 	WebDriverWait wit = new  WebDriverWait(driver,Duration.ofSeconds(2000));
 			List<WebElement> opto = wit.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[@id='et_autocomplete']")));
 
-	for(WebElement display: opto ) {
+	for(int i=0; i<=opt.size(); i++){
 		
-		System.out.println(display.getText());
+		System.out.println(opt.get[i].getText());
+
+
+		
 	}
 	
 	}}
